@@ -17,4 +17,10 @@ public:
 		this->manufacturer = manufacturer;
 		this->yearBuilt = yearBuilt;
 	}
+	string getManufacturer();
+	int getYear();
+
+	void setManufacturer();
+	void setYear();
+
 };
