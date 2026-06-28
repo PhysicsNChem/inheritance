@@ -16,4 +16,5 @@ public:
 	}
 	int getDoors();
 	void setDoors(int doors); //getter and setter for this
+	void displayInfo();
 };

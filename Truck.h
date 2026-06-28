@@ -15,4 +15,5 @@ public:
 	}
 	double getTowingCapacity();
 	void setTowingCapacity(double towingCap);
+	void displayInfo();
 };
