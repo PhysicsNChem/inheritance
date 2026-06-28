@@ -32,5 +32,38 @@ int main()
     Vehicle v(manufacturer, year);
 
     v.displayInfo();
+
+
+
+    cout << "Car:\n" << endl;
+
+    cin.ignore(); //since the last cin was direct to number
+    int doors;
+    cout << "Enter the manufacturer: ";
+    getline(cin, manufacturer); //use the same local variable
+
+    cout << "Enter the year built: ";
+    cin >> year;
+
+    while (cin.fail() || cin.peek() != '\n') { //failsafe
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Year built: ";
+        cin >> year;
+    }
+    cout << "Enter the number of doors: ";
+    cin >> doors;
+
+    while (cin.fail() || cin.peek() != '\n') { //failsafe
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Doors: ";
+        cin >> doors;
+    }
+
+    Car c(manufacturer, year, doors);
+
+    c.displayInfo();
+
 }
 
