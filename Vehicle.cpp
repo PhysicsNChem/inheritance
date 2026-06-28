@@ -4,3 +4,20 @@
 
 #include "Vehicle.h"
 
+
+string Vehicle::getManufacturer() {
+	return manufacturer;
+}
+
+int Vehicle::getYear() {
+	return yearBuilt;
+}
+
+void Vehicle::setManufacturer(string make) {
+	manufacturer = make;
+}
+
+void Vehicle::setYear(int year) {
+	yearBuilt = year;
+}
+

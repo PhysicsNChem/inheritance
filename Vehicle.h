@@ -20,7 +20,8 @@ public:
 	string getManufacturer();
 	int getYear();
 
-	void setManufacturer();
-	void setYear();
+	void setManufacturer(string make);
+	void setYear(int year);
 
+	void displayInfo();
 };
