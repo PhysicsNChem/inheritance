@@ -35,7 +35,7 @@ int main()
 
 
 
-    cout << "Car:\n" << endl;
+    cout << "\nCar:" << endl; //driver for Car
 
     cin.ignore(); //since the last cin was direct to number
     int doors;
@@ -64,6 +64,39 @@ int main()
     Car c(manufacturer, year, doors);
 
     c.displayInfo();
+
+
+
+
+    cout << "\nTruck:" << endl; //driver for Truck
+
+    cin.ignore(); //since the last cin was direct to number
+    double towingCapacity;
+    cout << "Enter the manufacturer: ";
+    getline(cin, manufacturer); //use the same local variable
+
+    cout << "Enter the year built: ";
+    cin >> year;
+
+    while (cin.fail() || cin.peek() != '\n') { //failsafe
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Year built: ";
+        cin >> year;
+    }
+    cout << "Enter the towing capacity: ";
+    cin >> towingCapacity;
+
+    while (cin.fail() || cin.peek() != '\n') { //failsafe
+        cin.clear();
+        cin.ignore(1000, '\n');
+        cout << "Towing capacity: ";
+        cin >> towingCapacity;
+    }
+
+    Truck t(manufacturer, year, towingCapacity);
+
+    t.displayInfo();
 
 }
 
