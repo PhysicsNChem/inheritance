@@ -3,9 +3,9 @@
 //June 28 2026
 
 #include "Vehicle.h"
+#include <iostream>
 
-
-string Vehicle::getManufacturer() {
+string Vehicle::getManufacturer() { //effectively using namespace Vehicle
 	return manufacturer;
 }
 
@@ -21,3 +21,8 @@ void Vehicle::setYear(int year) {
 	yearBuilt = year;
 }
 
+void Vehicle::displayInfo() {
+	cout << "Manufacturer: "s + manufacturer << endl;
+	cout << "Year built: "s << yearBuilt << endl;
+	
+}
